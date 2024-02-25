@@ -1,0 +1,108 @@
+/* Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left,
+.right {
+  flex: 1;
+  padding: 20px;
+}
+
+.left {
+  order: 2;
+}
+
+.right {
+  order: 1;
+}
+
+@media (max-width: 768px) {
+  .left,
+  .right {
+    flex: 100%;
+  }
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Colors */
+body {
+  background:linear-gradient(to right, #f58773, #f38ca4);
+}
+
+.container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects */
+.options i {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.options i:hover {
+  color: #f00;
+}
+
+/* Input field and button */
+.login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login input {
+  padding: 8px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.login button {
+  padding: 8px 16px;
+  font-size: 1.1rem;
+  background-color: #f3444c;
+  color: #fd9b9b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #0069d9;
+}

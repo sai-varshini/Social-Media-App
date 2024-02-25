@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+    <style>/* Layout */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .left,
+      .right {
+        flex: 1;
+        padding: 20px;
+      }
+      
+      .left {
+        order: 2;
+      }
+      
+      .right {
+        order: 1;
+      }
+      
+      @media (max-width: 768px) {
+        .left,
+        .right {
+          flex: 100%;
+        }
+      }
+      
+      /* Typography */
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 40px;
+        background-color: rgb(255, 255, 255);
+      }
+      
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      
+      /* Colors */
+      body {
+        background:linear-gradient(to right, #f58773, #f38ca4);
+      }
+      
+      .container {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Hover effects */
+      .options i {
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      
+      .options i:hover {
+        color: #f00;
+      }
+      
+      /* Input field and button */
+      .login {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      
+      .login input {
+        padding: 8px;
+        font-size: 1.1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex: 1;
+        margin-right: 10px;
+      }
+      
+      .login button {
+        padding: 8px 16px;
+        font-size: 1.1rem;
+        background-color: #f3444c;
+        color: #fd9b9b;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .login button:hover {
+        background-color: #0069d9;
+      }</style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <body>
+    <h1>Social Media App</h1>
+    <div class="container">
+      <div class="left">
+        <form id="form">
+          <label for="">Write your post here</label>
+          <br><br>
+          <textarea name="" id="input" cols="30" rows="10"></textarea>
+          <br><br>
+          <div id="msg"></div>
+          <button type="submit">Post</button>
+        </form>
+      </div>
+      <div class="right">
+        <h3>Your posts here</h3>
+        <div id="posts">
+          <div>
+            <p>HIIIIII!! Good Morning</p>
+            <span class="options">
+              <i onClick="editPost(this)" class="fas fa-edit"></i>
+              <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+            </span>
+          </div>
+          <div>
+            <p>It's Lunch Time!! Bon Appetite alll......</p>
+            <span class="options">
+              <i onClick="editPost(this)" class="fas fa-edit"></i>
+              <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+    <script href = "main.js"></script>
+
+</html>
+
+
